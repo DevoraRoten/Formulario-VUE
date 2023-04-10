@@ -1,15 +1,16 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <FormularioComponent/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineAsyncComponent } from 'vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    FormularioComponent: defineAsyncComponent(() => import('./components/FormularioComponent'))
   }
 }
 </script>
